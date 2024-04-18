@@ -1,0 +1,7 @@
+= Retrieval Augmented Generation (RAG) with Spring AI
+
+The endpoint http://localhost:8080/rag
+
+Using `httpie`:
+
+http :8080/rag question="Can you summarize DaShaun's experience?"

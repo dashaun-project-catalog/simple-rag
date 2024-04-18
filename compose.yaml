@@ -1,0 +1,10 @@
+services:
+  ollama:
+#    command: 'ollama run llama2:7b'
+    container_name: 'ollama'
+    image: 'ollama/ollama:latest'
+    ports:
+      - '11434:11434'
+    volumes:
+      - '.:/code'
+      - './ollama:/root/.ollama'
