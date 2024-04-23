@@ -1,0 +1,9 @@
+app:
+    resource: classpath:./dashaun.pdf
+spring:
+    ai:
+        ollama:
+            base-url: http://${OLLAMA_HOST}:${OLLAMA_PORT}
+            chat:
+                options:
+                    model: llama3
