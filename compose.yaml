@@ -1,6 +1,6 @@
 services:
   ollama:
-    command: 'ollama run mistral'
+    command: 'serve'
     container_name: 'ollama'
     image: 'ollama/ollama:latest'
     ports:
