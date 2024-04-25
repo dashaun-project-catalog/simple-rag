@@ -7,3 +7,6 @@ spring:
             chat:
                 options:
                     model: llama3
+    threads:
+        virtual:
+            enabled: true

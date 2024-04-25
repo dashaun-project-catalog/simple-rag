@@ -64,6 +64,12 @@
       <artifactId>ollama</artifactId>
       <version>1.19.7</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.testcontainers</groupId>
@@ -118,7 +124,10 @@
         </executions>
         <configuration>
           <image>
-            <builder>dashaun/builder:tiny</builder>
+            <buildpacks>
+              <buildpack>paketobuildpacks/java-native-image</buildpack>
+            </buildpacks>
+            <builder>paketobuildpacks/builder-jammy-buildpackless-tiny</builder>
             <createdDate>now</createdDate>
             <name>dashaun/${project.name}:v${project.version}-${os.detected.arch}</name>
           </image>
